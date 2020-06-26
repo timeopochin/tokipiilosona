@@ -95,6 +95,11 @@ Note that, as the variable may not be set a value within the function, it must b
 
 === Arrays
 
-Arrays are groups of things
+Arrays are groups of things.
 
 == Examples
+
+=== Classic 'Hello World!'
+
+    : ". !".
+
