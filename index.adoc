@@ -1,0 +1,100 @@
+= toki pi ilo sona
+
+== Intro
+
+=== What is toki pi ilo sona?
+
+toki pi ilo sona is a programming language that is written with the http://tokipona.net/tp/janpije/hieroglyphs.php[sitelen pona] hiroglyphic system for https://tokipona.org[toki pona].
+
+To write with this system on computers, this language uses "the currently-unused https://www.kreativekorp.com/ucsur/roadmap.shtml[UCSUR] range of 0xEE00 to 0xEE85". You can find more info on the https://jackhumbert.github.io/sitelen-pona-pona/[sitelen pona pona] website.
+
+=== Why?
+
+This project is (obviously) not intended to be a practical programming language. This is more of an exercise for myself and also something that has brought very interesting points up.
+
+Due to toki pona's very minimal vocabulary and basic grammar rules, the programming language naturally is very similar to grammatically correct text. Something like this could never be achieved when using English (or any other language for that matter) as it is too complex and inconsistant.
+
+=== Philosophy
+
+When creating this standard, these are the main things I tried acomplish:
+
+- Stay as close to correct grammar. In most programming languages, the syntax doesn't follow any logic. For the most part people (programmers) have an intuition based on de facto practices. For this project, I wanted to do something a bit different, I would rather have longer syntax if it meant that it had a clear link to what it meant. A good example for this is comments, I could have easily used something such as `//`, but I chose to use
+
+    :
+
+- MORE STUFF NEEDED
+
+== Syntax
+
+=== Comments
+
+Comments in code are simply parts that you want the computer to ignore. Therefore, to create one, you simply need to tell the computer just _that_:
+
+
+    : COMMENT
+
+and continue until the end of the line.
+
+=== Data types
+
+There are two data types in toki pi ilo sina: strings and positive integers
+
+=== Variables
+
+Variables are things, they can be a value, or be an object. They act similarly to variables in python and can switch between data types. To create a variable, you must also set its value using
+
+    NAMEVALUE.
+    NAME: ARITHMATIC.
+    NAMEFUNCTION.
+
+More information in <<functions>> about getting a returned value.
+
+[[functions, Functions]]
+=== Functions
+
+==== Basic structure
+
+All functions are algorithms or paths that the computer can take. They all follow the same basic structure:
+
+    NAME:
+    (
+        ALGORITHM
+    )
+
+Calling the function is simply telling the computer to go along that path and thus can be done using
+
+    NAME.
+
+==== Sending arguments
+
+If you want to send arguments to a function, you simply tell the computer to go on that path by using these arguments:
+
+    NAMEFIRSTARGSECONDARG.
+
+When you do this, the algorithm of the function now has access to these tools. You can refer to them based on the order they were sent with
+
+    ARGNUMBER
+
+Note that the number must be written using the toki pona <<number-system, number system>>. Also, these arguments are not copies of the tools, they are the tools, and thus will be changed outside of the function when changed inside of the function. Similarly to passing arguments by reference in existing programming languages.
+
+==== Returning a value
+
+When you want to return a value from a function, you simply need to make sure that a variable is responsible for the function being followed. And in this scenario, returning a value is simply a case of telling the computer to leave the path it is on and to make the reason it was on that path in the first place be a different value:
+
+    NAME:
+    (
+        ALGORITHM
+        : VALUE.
+    )
+    VARNAMEVARVALUE.
+    VARNAMENAME.
+
+Obviously, you can simply tell the computer to leave the path it is on without changing the variable's value.
+
+Note that, as the variable may not be set a value within the function, it must be defined before.
+
+=== Arrays
+
+Arrays are groups of things
+
+== Examples
