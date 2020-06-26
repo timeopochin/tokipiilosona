@@ -9,6 +9,8 @@ toki pi ilo sona is a programming language that is written with the http://tokip
 
 To write with this system on computers, this language uses "the currently-unused https://www.kreativekorp.com/ucsur/roadmap.shtml[UCSUR] range of 0xEE00 to 0xEE85". You can find more info on the https://jackhumbert.github.io/sitelen-pona-pona/[sitelen pona pona] website.
 
+None of what is here is set in stone, its a crazy project and I'm sure that many people will have great suggestions to change and improve it!
+
 === Why?
 
 This project is (obviously) not intended to be a practical programming language. This is more of an exercise for myself and also something that has brought very interesting points up.
@@ -17,13 +19,13 @@ Due to toki pona's very minimal vocabulary and basic grammar rules, the programm
 
 === Philosophy
 
-When creating this standard, these are the main things I tried acomplish:
-
-- Stay as close to correct grammar. In most programming languages, the syntax doesn't follow any logic. For the most part, people (programmers) have an intuition based on de facto practices. For this project, I wanted to do something a bit different, I would rather have longer syntax if it meant that it had a clear link to what it meant. A good example for this is comments, I could have easily used something such as `//`, but I chose to use
+When creating this standard, I did the best I could to stay as close to correct grammar. In most programming languages, the syntax doesn't follow any logic. For the most part, people (programmers) have an intuition based on de facto practices. For this project, I wanted to do something a bit different, I would rather have longer syntax if it meant that it had a clear link to what it meant. A good example for this is comments, I could have easily used something such as `//`, but I chose to use
 
     :
 
-- MORE STUFF NEEDED
+=== How can you use it?
+
+For now, you can't run code in this programming language, it is just a standard/set of rules. I'm hoping that this will change soon, I've made some prototype compilers and as soon as one is ready to play around with I'll update this file with details on how to use it.
 
 == Syntax
 
@@ -62,6 +64,18 @@ Variable names need to adhere to these rules:
 
     
 
+==== Special temporary variable
+
+As you cannot use the <<alt-arithmatic>> in chains, there is a special variable that is simply defined as
+
+    VALUE.
+
+And you refer to this value with
+
+    
+
+This is useful as it removes the need to have lots of redundant variables.
+
 === Data types
 
 There are three data types in toki pi ilo sina: characters, positive integers and booleans. Each one of these can be either a single value, or an array of values of its type.
@@ -88,11 +102,29 @@ These are equivalent to _true_ and _false_ respectively.
 
 ==== Converting between data types
 
-To convert between 
+To convert between characters and positive integers you can create a value similar to the one of the other type:
+
+    TYPEVARIABLE.
+
+Once you have done this, you can refer to the converted value with
+
+    TYPE
+
+`TYPE` can be
+
+    
+
+or
+
+    
+
+to represent _character_ or _positive integer_ respectively.
 
 === Arithmatic
 
 This is probably the area of toki pi ilo sona that strays the furthest away from toki pona. When programming, arithmatic is essential, and even when trying to maintain the basic number system. There is no standard way to do arithmatic in toki pona. Some of this has been inspired by a https://www.reddit.com/r/tokipona/comments/fv9ihc/complex_math_in_toki_pona/[post] by u/janPawato.
+
+For now, I am going to use the <<alt-arithmatic>>, but in the future this might become the main one as it is much more practical.
 
 [[addition, Addition and concatenation]]
 ==== Addition and concatenation
@@ -100,6 +132,41 @@ This is probably the area of toki pi ilo sona that strays the furthest away from
     FIRSTVALUESECONDVALUE
 
 is (in my opinion) intuitively means concatinate (when working with strings or arrays) and add (when working with numbers). Using this with an a string and a number will result in the number being converted to a string representing it. Similarly, if an array and different value is used, the string or number will be converted to an array of length one containg the value.
+
+[[alt-arithmatic, Alternate arithmatic]]
+=== Alternate arithmatic
+
+This is an idea that might be slighly impractical, but I want to include and use it anyway as it does stay closer to grammaticaly correct toki pona! This arithmatic can be done by asking how many apples you would have in hypothetical situations:
+
+==== Addition
+
+    FIRSTNUMBER, SECONDNUMBER, ?
+
+If you have `FIRSTNUMBER` apples and you get `SECONDNUMBER` more apples, how many apples do you have?
+
+==== Substraction
+
+    FIRSTNUMBER, SECONDNUMBER, ?
+
+If you have `FIRSTNUMBER` apples and you give `SECONDNUMBER` apples away, how many apples do you have?
+
+==== Multiplication
+
+    , FIRSTNUMBERSECONDNUMBER, ?
+
+If you have any apples and you get `FIRSTNUMBER` apples a `SECONDNUMBER` number of times, how many apples do you have?
+
+==== Division
+
+    FIRSTNUMBER, SECONDNUMBER?
+
+If you have `FIRSTNUMBER`, how many times can you give `SECONDNUMBER` apples away?
+
+Finally, to do something with this number you can refer to it as _what the computer replied_:
+
+    
+
+Note that this does not have to be used imediately after the question, it will simply hold the answer to the last question asked.
 
 === Boolean logic
 
@@ -221,6 +288,16 @@ Note that you can chain as many of the second statement as you wish and that onl
 
 ==== Conditions
 
+There are three main conditions: equals, is greater than, is smaller than and the syntax for these is
+
+    FIRSTVALUESECONDVALUE
+
+    FIRSTVALUESECONDVALUE
+
+    FIRSTVALUESECONDVALUE
+
+respectively.
+
 === Looping code
 
 To loop code is similar to <<if>>. But you need to specify that it should cycle while the condition is true with
@@ -236,7 +313,36 @@ Arrays are groups of things. And I have yet to design syntax for them.
 
 == Examples
 
+Here are some examples in toki pi ilo sona.
+
 === Classic 'Hello World!'
 
     : ". !".
 
+=== Check if a number is prime
+
+    :
+    (
+        :
+        (
+            .
+            :
+            (
+                , ?
+                , , ?
+                , , ?
+                :
+                (
+                    : "".
+                    .
+                )
+            )
+            : "".
+        ) :
+        (
+            : "".
+        )
+    )
+    .
+    .
+    .

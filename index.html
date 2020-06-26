@@ -435,6 +435,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_what_is_toki_pi_ilo_sona">What is toki pi ilo sona?</a></li>
 <li><a href="#_why">Why?</a></li>
 <li><a href="#_philosophy">Philosophy</a></li>
+<li><a href="#_how_can_you_use_it">How can you use it?</a></li>
 </ul>
 </li>
 <li><a href="#_syntax">Syntax</a>
@@ -443,6 +444,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_variables">Variables</a></li>
 <li><a href="#_data_types">Data types</a></li>
 <li><a href="#_arithmatic">Arithmatic</a></li>
+<li><a href="#alt-arithmatic">Alternate arithmatic</a></li>
 <li><a href="#_boolean_logic">Boolean logic</a></li>
 <li><a href="#_output">Output</a></li>
 <li><a href="#_input">Input</a></li>
@@ -455,6 +457,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_examples">Examples</a>
 <ul class="sectlevel2">
 <li><a href="#_classic_hello_world">Classic 'Hello World!'</a></li>
+<li><a href="#_check_if_a_number_is_prime">Check if a number is prime</a></li>
 </ul>
 </li>
 </ul>
@@ -472,6 +475,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="paragraph">
 <p>To write with this system on computers, this language uses "the currently-unused <a href="https://www.kreativekorp.com/ucsur/roadmap.shtml">UCSUR</a> range of 0xEE00 to 0xEE85". You can find more info on the <a href="https://jackhumbert.github.io/sitelen-pona-pona/">sitelen pona pona</a> website.</p>
 </div>
+<div class="paragraph">
+<p>None of what is here is set in stone, its a crazy project and I&#8217;m sure that many people will have great suggestions to change and improve it!</p>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_why">Why?</h3>
@@ -485,22 +491,18 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect2">
 <h3 id="_philosophy">Philosophy</h3>
 <div class="paragraph">
-<p>When creating this standard, these are the main things I tried acomplish:</p>
+<p>When creating this standard, I did the best I could to stay as close to correct grammar. In most programming languages, the syntax doesn&#8217;t follow any logic. For the most part, people (programmers) have an intuition based on de facto practices. For this project, I wanted to do something a bit different, I would rather have longer syntax if it meant that it had a clear link to what it meant. A good example for this is comments, I could have easily used something such as <code>//</code>, but I chose to use</p>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p>Stay as close to correct grammar. In most programming languages, the syntax doesn&#8217;t follow any logic. For the most part, people (programmers) have an intuition based on de facto practices. For this project, I wanted to do something a bit different, I would rather have longer syntax if it meant that it had a clear link to what it meant. A good example for this is comments, I could have easily used something such as <code>//</code>, but I chose to use</p>
 <div class="literalblock">
 <div class="content">
 <pre>:</pre>
 </div>
 </div>
-</li>
-<li>
-<p>MORE STUFF NEEDED</p>
-</li>
-</ul>
+</div>
+<div class="sect2">
+<h3 id="_how_can_you_use_it">How can you use it?</h3>
+<div class="paragraph">
+<p>For now, you can&#8217;t run code in this programming language, it is just a standard/set of rules. I&#8217;m hoping that this will change soon, I&#8217;ve made some prototype compilers and as soon as one is ready to play around with I&#8217;ll update this file with details on how to use it.</p>
 </div>
 </div>
 </div>
@@ -569,6 +571,28 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 </ul>
 </div>
+<div class="sect3">
+<h4 id="_special_temporary_variable">Special temporary variable</h4>
+<div class="paragraph">
+<p>As you cannot use the <a href="#alt-arithmatic">Alternate arithmatic</a> in chains, there is a special variable that is simply defined as</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>VALUE.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>And you refer to this value with</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This is useful as it removes the need to have lots of redundant variables.</p>
+</div>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_data_types">Data types</h3>
@@ -612,7 +636,39 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect3">
 <h4 id="_converting_between_data_types">Converting between data types</h4>
 <div class="paragraph">
-<p>To convert between</p>
+<p>To convert between characters and positive integers you can create a value similar to the one of the other type:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>TYPEVARIABLE.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Once you have done this, you can refer to the converted value with</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>TYPE</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><code>TYPE</code> can be</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>or</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>to represent <em>character</em> or <em>positive integer</em> respectively.</p>
 </div>
 </div>
 </div>
@@ -620,6 +676,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h3 id="_arithmatic">Arithmatic</h3>
 <div class="paragraph">
 <p>This is probably the area of toki pi ilo sona that strays the furthest away from toki pona. When programming, arithmatic is essential, and even when trying to maintain the basic number system. There is no standard way to do arithmatic in toki pona. Some of this has been inspired by a <a href="https://www.reddit.com/r/tokipona/comments/fv9ihc/complex_math_in_toki_pona/">post</a> by u/janPawato.</p>
+</div>
+<div class="paragraph">
+<p>For now, I am going to use the <a href="#alt-arithmatic">Alternate arithmatic</a>, but in the future this might become the main one as it is much more practical.</p>
 </div>
 <div class="sect3">
 <h4 id="addition">Addition and concatenation</h4>
@@ -630,6 +689,67 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div class="paragraph">
 <p>is (in my opinion) intuitively means concatinate (when working with strings or arrays) and add (when working with numbers). Using this with an a string and a number will result in the number being converted to a string representing it. Similarly, if an array and different value is used, the string or number will be converted to an array of length one containg the value.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="alt-arithmatic">Alternate arithmatic</h3>
+<div class="paragraph">
+<p>This is an idea that might be slighly impractical, but I want to include and use it anyway as it does stay closer to grammaticaly correct toki pona! This arithmatic can be done by asking how many apples you would have in hypothetical situations:</p>
+</div>
+<div class="sect3">
+<h4 id="_addition">Addition</h4>
+<div class="literalblock">
+<div class="content">
+<pre>FIRSTNUMBER, SECONDNUMBER, ?</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If you have <code>FIRSTNUMBER</code> apples and you get <code>SECONDNUMBER</code> more apples, how many apples do you have?</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_substraction">Substraction</h4>
+<div class="literalblock">
+<div class="content">
+<pre>FIRSTNUMBER, SECONDNUMBER, ?</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If you have <code>FIRSTNUMBER</code> apples and you give <code>SECONDNUMBER</code> apples away, how many apples do you have?</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_multiplication">Multiplication</h4>
+<div class="literalblock">
+<div class="content">
+<pre>, FIRSTNUMBERSECONDNUMBER, ?</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If you have any apples and you get <code>FIRSTNUMBER</code> apples a <code>SECONDNUMBER</code> number of times, how many apples do you have?</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_division">Division</h4>
+<div class="literalblock">
+<div class="content">
+<pre>FIRSTNUMBER, SECONDNUMBER?</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If you have <code>FIRSTNUMBER</code>, how many times can you give <code>SECONDNUMBER</code> apples away?</p>
+</div>
+<div class="paragraph">
+<p>Finally, to do something with this number you can refer to it as <em>what the computer replied</em>:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Note that this does not have to be used imediately after the question, it will simply hold the answer to the last question asked.</p>
 </div>
 </div>
 </div>
@@ -823,7 +943,27 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div class="sect3">
 <h4 id="_conditions">Conditions</h4>
-
+<div class="paragraph">
+<p>There are three main conditions: equals, is greater than, is smaller than and the syntax for these is</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>FIRSTVALUESECONDVALUE</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>FIRSTVALUESECONDVALUE</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>FIRSTVALUESECONDVALUE</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>respectively.</p>
+</div>
 </div>
 </div>
 <div class="sect2">
@@ -851,6 +991,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect1">
 <h2 id="_examples">Examples</h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p>Here are some examples in toki pi ilo sona.</p>
+</div>
 <div class="sect2">
 <h3 id="_classic_hello_world">Classic 'Hello World!'</h3>
 <div class="literalblock">
@@ -859,12 +1002,44 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 </div>
+<div class="sect2">
+<h3 id="_check_if_a_number_is_prime">Check if a number is prime</h3>
+<div class="literalblock">
+<div class="content">
+<pre>:
+(
+    :
+    (
+        .
+        :
+        (
+            , ?
+            , , ?
+            , , ?
+            :
+            (
+                : "".
+                .
+            )
+        )
+        : "".
+    ) :
+    (
+        : "".
+    )
+)
+.
+.
+.</pre>
+</div>
+</div>
+</div>
 </div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2020-06-26 16:42:06
+Last updated 2020-06-26 18:36:09
 </div>
 </div>
 </body>
