@@ -1,6 +1,5 @@
-[TOC]
-
 = toki pi ilo sona
+:toc:
 
 == Intro
 
