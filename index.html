@@ -447,6 +447,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_output">Output</a></li>
 <li><a href="#_input">Input</a></li>
 <li><a href="#functions">Functions</a></li>
+<li><a href="#_conditional_statements">Conditional statements</a></li>
+<li><a href="#_looping_code">Looping code</a></li>
 <li><a href="#_arrays">Arrays</a></li>
 </ul>
 </li>
@@ -552,6 +554,21 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="paragraph">
 <p>can be used, but as you are saying that <em>it is</em> the other variable and not <em>the same as</em>, changing one will change the other.</p>
 </div>
+<div class="paragraph">
+<p>Variable names need to adhere to these rules:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Due to the nature of <a href="#negation">Negation</a> syntax, they cannot end with</p>
+<div class="literalblock">
+<div class="content">
+<pre></pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_data_types">Data types</h3>
@@ -592,6 +609,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>These are equivalent to <em>true</em> and <em>false</em> respectively.</p>
 </div>
 </div>
+<div class="sect3">
+<h4 id="_converting_between_data_types">Converting between data types</h4>
+<div class="paragraph">
+<p>To convert between</p>
+</div>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_arithmatic">Arithmatic</h3>
@@ -599,7 +622,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>This is probably the area of toki pi ilo sona that strays the furthest away from toki pona. When programming, arithmatic is essential, and even when trying to maintain the basic number system. There is no standard way to do arithmatic in toki pona. Some of this has been inspired by a <a href="https://www.reddit.com/r/tokipona/comments/fv9ihc/complex_math_in_toki_pona/">post</a> by u/janPawato.</p>
 </div>
 <div class="sect3">
-<h4 id="_addition_and_concatenation">Addition and concatenation</h4>
+<h4 id="addition">Addition and concatenation</h4>
 <div class="literalblock">
 <div class="content">
 <pre>FIRSTVALUESECONDVALUE</pre>
@@ -612,7 +635,36 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div class="sect2">
 <h3 id="_boolean_logic">Boolean logic</h3>
-
+<div class="sect3">
+<h4 id="negation">Negation</h4>
+<div class="paragraph">
+<p>To negate a boolean value, you can simply say that it is <em>not</em> that value:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>BOOLVALUE</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_and_and_or">And and Or</h4>
+<div class="paragraph">
+<p>These are simple operators, used intiuitively similar to <a href="#addition">Addition and concatenation</a>. For <em>and</em> and <em>or</em> respectively, use</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>and</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre></pre>
+</div>
+</div>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_output">Output</h3>
@@ -722,9 +774,76 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect2">
+<h3 id="_conditional_statements">Conditional statements</h3>
+<div class="paragraph">
+<p>Conditional statements are one of the core concepts of programming, without them you wouldn&#8217;t be able to do much. In toki pi ilo sona they follow a very similar structure to the common programming terms <em>if</em> and <em>else</em>.</p>
+</div>
+<div class="sect3">
+<h4 id="if">If statements</h4>
+<div class="paragraph">
+<p>The most basic form of a conditional statement is</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>CONDITION:
+(
+    ALGORITHM
+)</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If you are familiar with toki pona, this should be very intuitive, the only difference with the spoken language is that we are able to group multiple things with the parenthasese.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_else_if_statements">Else if statements</h4>
+<div class="paragraph">
+<p>If you wish to have code to be run in the case that the condition was not met you can use</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>FIRSTCONDITION:
+(
+    FIRSTALGORITHM
+) : SECONDCONDITION:
+(
+    SECONDALGORITHM
+) :
+(
+    THIRDALGORITHM
+)</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>With this structure, only one algorithm will run. If the first condition is <em>true</em>, the first algorithm will run, regardless of the other condition. If the first condition is <em>false</em> but the second one is <em>true</em> then the second algorithm will run. And finally, the third algorithm will only run in the case where both conditions are <em>false</em>.</p>
+</div>
+<div class="paragraph">
+<p>Note that you can chain as many of the second statement as you wish and that only the first is necessary.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_conditions">Conditions</h4>
+
+</div>
+</div>
+<div class="sect2">
+<h3 id="_looping_code">Looping code</h3>
+<div class="paragraph">
+<p>To loop code is similar to <a href="#if">If statements</a>. But you need to specify that it should cycle while the condition is true with</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>CONDITION:
+(
+    ALGORITHM
+)</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
 <h3 id="_arrays">Arrays</h3>
 <div class="paragraph">
-<p>Arrays are groups of things.</p>
+<p>Arrays are groups of things. And I have yet to design syntax for them.</p>
 </div>
 </div>
 </div>
@@ -745,7 +864,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2020-06-26 15:55:25
+Last updated 2020-06-26 16:42:06
 </div>
 </div>
 </body>

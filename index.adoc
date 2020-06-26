@@ -56,6 +56,12 @@ More information in <<functions>> about getting a returned value. also note that
 
 can be used, but as you are saying that _it is_ the other variable and not _the same as_, changing one will change the other.
 
+Variable names need to adhere to these rules:
+
+- Due to the nature of <<negation>> syntax, they cannot end with
+
+    
+
 === Data types
 
 There are three data types in toki pi ilo sina: characters, positive integers and booleans. Each one of these can be either a single value, or an array of values of its type.
@@ -80,10 +86,15 @@ or
 
 These are equivalent to _true_ and _false_ respectively.
 
+==== Converting between data types
+
+To convert between 
+
 === Arithmatic
 
 This is probably the area of toki pi ilo sona that strays the furthest away from toki pona. When programming, arithmatic is essential, and even when trying to maintain the basic number system. There is no standard way to do arithmatic in toki pona. Some of this has been inspired by a https://www.reddit.com/r/tokipona/comments/fv9ihc/complex_math_in_toki_pona/[post] by u/janPawato.
 
+[[addition, Addition and concatenation]]
 ==== Addition and concatenation
 
     FIRSTVALUESECONDVALUE
@@ -91,6 +102,23 @@ This is probably the area of toki pi ilo sona that strays the furthest away from
 is (in my opinion) intuitively means concatinate (when working with strings or arrays) and add (when working with numbers). Using this with an a string and a number will result in the number being converted to a string representing it. Similarly, if an array and different value is used, the string or number will be converted to an array of length one containg the value.
 
 === Boolean logic
+
+[[negation, Negation]]
+==== Negation
+
+To negate a boolean value, you can simply say that it is _not_ that value:
+
+    BOOLVALUE
+
+==== And and Or
+
+These are simple operators, used intiuitively similar to <<addition>>. For _and_ and _or_ respectively, use
+
+    
+
+and
+
+    
 
 === Output
 
@@ -156,9 +184,55 @@ Obviously, you can simply tell the computer to abandon the path it is on without
 
 Note that, as the variable may not be set a value within the function, it must be defined before.
 
+=== Conditional statements
+
+Conditional statements are one of the core concepts of programming, without them you wouldn't be able to do much. In toki pi ilo sona they follow a very similar structure to the common programming terms _if_ and _else_.
+
+[[if, If statements]]
+==== If statements
+
+The most basic form of a conditional statement is
+
+    CONDITION:
+    (
+        ALGORITHM
+    )
+
+If you are familiar with toki pona, this should be very intuitive, the only difference with the spoken language is that we are able to group multiple things with the parenthasese.
+
+==== Else if statements
+
+If you wish to have code to be run in the case that the condition was not met you can use
+
+    FIRSTCONDITION:
+    (
+        FIRSTALGORITHM
+    ) : SECONDCONDITION:
+    (
+        SECONDALGORITHM
+    ) :
+    (
+        THIRDALGORITHM
+    )
+
+With this structure, only one algorithm will run. If the first condition is _true_, the first algorithm will run, regardless of the other condition. If the first condition is _false_ but the second one is _true_ then the second algorithm will run. And finally, the third algorithm will only run in the case where both conditions are _false_.
+
+Note that you can chain as many of the second statement as you wish and that only the first is necessary.
+
+==== Conditions
+
+=== Looping code
+
+To loop code is similar to <<if>>. But you need to specify that it should cycle while the condition is true with
+
+    CONDITION:
+    (
+        ALGORITHM
+    )
+
 === Arrays
 
-Arrays are groups of things.
+Arrays are groups of things. And I have yet to design syntax for them.
 
 == Examples
 
