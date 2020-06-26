@@ -1,0 +1,5 @@
+= toki pi ilo sona
+
+toki pi ilo sona is a programming languge based on toki pona.
+
+More info https://timeopochin.github.io/tokipiilosona[here].
