@@ -458,7 +458,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="ulist">
 <ul>
 <li>
-<p>Stay as close to correct grammar. In most programming languages, the syntax doesn&#8217;t follow any logic. For the most part people (programmers) have an intuition based on de facto practices. For this project, I wanted to do something a bit different, I would rather have longer syntax if it meant that it had a clear link to what it meant. A good example for this is comments, I could have easily used something such as <code>//</code>, but I chose to use</p>
+<p>Stay as close to correct grammar. In most programming languages, the syntax doesn&#8217;t follow any logic. For the most part, people (programmers) have an intuition based on de facto practices. For this project, I wanted to do something a bit different, I would rather have longer syntax if it meant that it had a clear link to what it meant. A good example for this is comments, I could have easily used something such as <code>//</code>, but I chose to use</p>
 <div class="literalblock">
 <div class="content">
 <pre>:</pre>
@@ -487,7 +487,15 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="paragraph">
-<p>and continue until the end of the line.</p>
+<p>These comments will continue until the end of the line. For multi line comments, you can use</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>:
+(
+    COMMENT
+)</pre>
+</div>
 </div>
 </div>
 <div class="sect2">
@@ -512,7 +520,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="paragraph">
-<p>can be used, but as you are saying that <em>it is</em> the other variable and not <em>the same as</em>, changing one will change the oother.</p>
+<p>can be used, but as you are saying that <em>it is</em> the other variable and not <em>the same as</em>, changing one will change the other.</p>
 </div>
 </div>
 <div class="sect2">
@@ -671,7 +679,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="paragraph">
-<p>Obviously, you can simply tell the computer to leave the path it is on without changing the variable&#8217;s value.</p>
+<p>Obviously, you can simply tell the computer to abandon the path it is on without changing the variable&#8217;s value with</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>.</pre>
+</div>
 </div>
 <div class="paragraph">
 <p>Note that, as the variable may not be set a value within the function, it must be defined before.</p>
@@ -702,7 +715,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2020-06-26 15:24:02
+Last updated 2020-06-26 15:40:44
 </div>
 </div>
 </body>

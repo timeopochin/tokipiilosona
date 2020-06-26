@@ -1,3 +1,5 @@
+[TOC]
+
 = toki pi ilo sona
 
 == Intro
@@ -18,7 +20,7 @@ Due to toki pona's very minimal vocabulary and basic grammar rules, the programm
 
 When creating this standard, these are the main things I tried acomplish:
 
-- Stay as close to correct grammar. In most programming languages, the syntax doesn't follow any logic. For the most part people (programmers) have an intuition based on de facto practices. For this project, I wanted to do something a bit different, I would rather have longer syntax if it meant that it had a clear link to what it meant. A good example for this is comments, I could have easily used something such as `//`, but I chose to use
+- Stay as close to correct grammar. In most programming languages, the syntax doesn't follow any logic. For the most part, people (programmers) have an intuition based on de facto practices. For this project, I wanted to do something a bit different, I would rather have longer syntax if it meant that it had a clear link to what it meant. A good example for this is comments, I could have easily used something such as `//`, but I chose to use
 
     :
 
@@ -33,7 +35,12 @@ Comments in code are simply parts that you want the computer to ignore. Therefor
 
     : COMMENT
 
-and continue until the end of the line.
+These comments will continue until the end of the line. For multi line comments, you can use
+
+    :
+    (
+        COMMENT
+    )
 
 === Variables
 
@@ -48,7 +55,7 @@ More information in <<functions>> about getting a returned value. also note that
 
     VARNAMEOTHERVAR.
 
-can be used, but as you are saying that _it is_ the other variable and not _the same as_, changing one will change the oother.
+can be used, but as you are saying that _it is_ the other variable and not _the same as_, changing one will change the other.
 
 === Data types
 
@@ -144,7 +151,9 @@ When you want to return a value from a function, you simply need to make sure th
     VARNAMEVARVALUE.
     VARNAMEFUNCNAME.
 
-Obviously, you can simply tell the computer to leave the path it is on without changing the variable's value.
+Obviously, you can simply tell the computer to abandon the path it is on without changing the variable's value with
+
+    .
 
 Note that, as the variable may not be set a value within the function, it must be defined before.
 
