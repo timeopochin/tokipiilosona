@@ -35,19 +35,74 @@ Comments in code are simply parts that you want the computer to ignore. Therefor
 
 and continue until the end of the line.
 
-=== Data types
-
-There are two data types in toki pi ilo sina: strings and positive integers
-
 === Variables
 
 Variables are things, they can be a value, or be an object. They act similarly to variables in python and can switch between data types. To create a variable, you must also set its value using
 
-    NAMEVALUE.
-    NAME: ARITHMATIC.
-    NAMEFUNCTION.
+    VARNAMEVALUE.
+    VARNAMEOTHERVAR.
+    VARNAME: ARITHMATIC.
+    VARNAMEFUNCTION.
 
-More information in <<functions>> about getting a returned value.
+More information in <<functions>> about getting a returned value. also note that
+
+    VARNAMEOTHERVAR.
+
+can be used, but as you are saying that _it is_ the other variable and not _the same as_, changing one will change the oother.
+
+=== Data types
+
+There are three data types in toki pi ilo sina: characters, positive integers and booleans. Each one of these can be either a single value, or an array of values of its type.
+
+==== Characters
+
+These are values that contain one character. These could be latin characters as well as sitelen pona glyphs.
+
+==== Positive integers
+
+Positive integers can be used in arithmatic, you can find more information in <<number-system, Number System>>
+
+==== Booleans
+
+Bolean values can only have two values:
+
+    
+
+or
+
+    
+
+These are equivalent to _true_ and _false_ respectively.
+
+=== Arithmatic
+
+This is probably the area of toki pi ilo sona that strays the furthest away from toki pona. When programming, arithmatic is essential, and even when trying to maintain the basic number system. There is no standard way to do arithmatic in toki pona. Some of this has been inspired by a https://www.reddit.com/r/tokipona/comments/fv9ihc/complex_math_in_toki_pona/[post] by u/janPawato.
+
+==== Addition and concatenation
+
+    FIRSTVALUESECONDVALUE
+
+is (in my opinion) intuitively means concatinate (when working with strings or arrays) and add (when working with numbers). Using this with an a string and a number will result in the number being converted to a string representing it. Similarly, if an array and different value is used, the string or number will be converted to an array of length one containg the value.
+
+=== Boolean logic
+
+=== Output
+
+When you want the computer to display text on the screen, you must tell it to do so with
+
+    VALUE.
+    VARIABLE.
+    : ARITHMATIC.
+
+=== Input
+
+To interact with the computer, it needs to come to have what you say:
+
+    .
+
+Now, it is unlikely that you want to get user input without storing what this input is, to do so you can tell the computer to set this value to a variable with
+
+    : VARNAME.
 
 [[functions, Functions]]
 === Functions
@@ -56,22 +111,22 @@ More information in <<functions>> about getting a returned value.
 
 All functions are algorithms or paths that the computer can take. They all follow the same basic structure:
 
-    NAME:
+    FUNCNAME:
     (
         ALGORITHM
     )
 
 Calling the function is simply telling the computer to go along that path and thus can be done using
 
-    NAME.
+    FUNCNAME.
 
 ==== Sending arguments
 
 If you want to send arguments to a function, you simply tell the computer to go on that path by using these arguments:
 
-    NAMEFIRSTARGSECONDARG.
+    FUNCNAMEFIRSTARGSECONDARG.
 
-When you do this, the algorithm of the function now has access to these tools. You can refer to them based on the order they were sent with
+When you do this, the algorithm of the function gains access to these tools. You can refer to them based on the order they were sent with
 
     ARGNUMBER
 
@@ -81,13 +136,13 @@ Note that the number must be written using the toki pona <<number-system, number
 
 When you want to return a value from a function, you simply need to make sure that a variable is responsible for the function being followed. And in this scenario, returning a value is simply a case of telling the computer to leave the path it is on and to make the reason it was on that path in the first place be a different value:
 
-    NAME:
+    FUNCNAME:
     (
         ALGORITHM
         : VALUE.
     )
     VARNAMEVARVALUE.
-    VARNAMENAME.
+    VARNAMEFUNCNAME.
 
 Obviously, you can simply tell the computer to leave the path it is on without changing the variable's value.
 

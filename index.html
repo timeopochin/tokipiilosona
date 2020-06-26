@@ -491,25 +491,121 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect2">
-<h3 id="_data_types">Data types</h3>
-<div class="paragraph">
-<p>There are two data types in toki pi ilo sina: strings and positive integers</p>
-</div>
-</div>
-<div class="sect2">
 <h3 id="_variables">Variables</h3>
 <div class="paragraph">
 <p>Variables are things, they can be a value, or be an object. They act similarly to variables in python and can switch between data types. To create a variable, you must also set its value using</p>
 </div>
 <div class="literalblock">
 <div class="content">
-<pre>NAMEVALUE.
-NAME: ARITHMATIC.
-NAMEFUNCTION.</pre>
+<pre>VARNAMEVALUE.
+VARNAMEOTHERVAR.
+VARNAME: ARITHMATIC.
+VARNAMEFUNCTION.</pre>
 </div>
 </div>
 <div class="paragraph">
-<p>More information in <a href="#functions">Functions</a> about getting a returned value.</p>
+<p>More information in <a href="#functions">Functions</a> about getting a returned value. also note that</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>VARNAMEOTHERVAR.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>can be used, but as you are saying that <em>it is</em> the other variable and not <em>the same as</em>, changing one will change the oother.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_data_types">Data types</h3>
+<div class="paragraph">
+<p>There are three data types in toki pi ilo sina: characters, positive integers and booleans. Each one of these can be either a single value, or an array of values of its type.</p>
+</div>
+<div class="sect3">
+<h4 id="_characters">Characters</h4>
+<div class="paragraph">
+<p>These are values that contain one character. These could be latin characters as well as sitelen pona glyphs.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_positive_integers">Positive integers</h4>
+<div class="paragraph">
+<p>Positive integers can be used in arithmatic, you can find more information in <a href="#number-system">Number System</a></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_booleans">Booleans</h4>
+<div class="paragraph">
+<p>Bolean values can only have two values:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>or</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>These are equivalent to <em>true</em> and <em>false</em> respectively.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_arithmatic">Arithmatic</h3>
+<div class="paragraph">
+<p>This is probably the area of toki pi ilo sona that strays the furthest away from toki pona. When programming, arithmatic is essential, and even when trying to maintain the basic number system. There is no standard way to do arithmatic in toki pona. Some of this has been inspired by a <a href="https://www.reddit.com/r/tokipona/comments/fv9ihc/complex_math_in_toki_pona/">post</a> by u/janPawato.</p>
+</div>
+<div class="sect3">
+<h4 id="_addition_and_concatenation">Addition and concatenation</h4>
+<div class="literalblock">
+<div class="content">
+<pre>FIRSTVALUESECONDVALUE</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>is (in my opinion) intuitively means concatinate (when working with strings or arrays) and add (when working with numbers). Using this with an a string and a number will result in the number being converted to a string representing it. Similarly, if an array and different value is used, the string or number will be converted to an array of length one containg the value.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_boolean_logic">Boolean logic</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_output">Output</h3>
+<div class="paragraph">
+<p>When you want the computer to display text on the screen, you must tell it to do so with</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>VALUE.
+VARIABLE.
+: ARITHMATIC.</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_input">Input</h3>
+<div class="paragraph">
+<p>To interact with the computer, it needs to come to have what you say:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Now, it is unlikely that you want to get user input without storing what this input is, to do so you can tell the computer to set this value to a variable with</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>: VARNAME.</pre>
+</div>
 </div>
 </div>
 <div class="sect2">
@@ -521,7 +617,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div class="literalblock">
 <div class="content">
-<pre>NAME:
+<pre>FUNCNAME:
 (
     ALGORITHM
 )</pre>
@@ -532,7 +628,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div class="literalblock">
 <div class="content">
-<pre>NAME.</pre>
+<pre>FUNCNAME.</pre>
 </div>
 </div>
 </div>
@@ -543,11 +639,11 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div class="literalblock">
 <div class="content">
-<pre>NAMEFIRSTARGSECONDARG.</pre>
+<pre>FUNCNAMEFIRSTARGSECONDARG.</pre>
 </div>
 </div>
 <div class="paragraph">
-<p>When you do this, the algorithm of the function now has access to these tools. You can refer to them based on the order they were sent with</p>
+<p>When you do this, the algorithm of the function gains access to these tools. You can refer to them based on the order they were sent with</p>
 </div>
 <div class="literalblock">
 <div class="content">
@@ -565,13 +661,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div class="literalblock">
 <div class="content">
-<pre>NAME:
+<pre>FUNCNAME:
 (
     ALGORITHM
     : VALUE.
 )
 VARNAMEVARVALUE.
-VARNAMENAME.</pre>
+VARNAMEFUNCNAME.</pre>
 </div>
 </div>
 <div class="paragraph">
@@ -606,7 +702,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2020-06-26 14:14:29
+Last updated 2020-06-26 15:24:02
 </div>
 </div>
 </body>
