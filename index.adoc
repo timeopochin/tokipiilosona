@@ -120,6 +120,25 @@ or
 
 to represent _character_ or _positive integer_ respectively.
 
+[[number-system, Number system]]
+=== Number system
+
+The number system for representing positive integers uses the symbols
+
+    
+
+to represent values _100_, _20_, _5_, _2_ and _1_ respectively. The way other numbers are constructed is simply through addition. For example
+
+    
+
+represents _100 + 5 + 5 + 2_ or _112_. Though for a number to be valid, it must be in descending order.
+
+When doing arithmatic with positive numbers, if _0_ or a negative number is reached, the value will simply become
+
+    
+
+which is similar to _null_ in other programming languages.
+
 === Arithmatic
 
 This is probably the area of toki pi ilo sona that strays the furthest away from toki pona. When programming, arithmatic is essential, and even when trying to maintain the basic number system. There is no standard way to do arithmatic in toki pona. Some of this has been inspired by a https://www.reddit.com/r/tokipona/comments/fv9ihc/complex_math_in_toki_pona/[post] by u/janPawato.
