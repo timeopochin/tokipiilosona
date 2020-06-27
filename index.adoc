@@ -15,7 +15,7 @@ None of what is here is set in stone, its a crazy project and I'm sure that many
 
 This project is (obviously) not intended to be a practical programming language. This is more of an exercise for myself and also something that has brought very interesting points up.
 
-Due to toki pona's very minimal vocabulary and basic grammar rules, the programming language naturally is very similar to grammatically correct text. Something like this could never be achieved when using English (or any other language for that matter) as it is too complex and inconsistant.
+Due to toki pona's very minimal vocabulary and basic grammar rules, the programming language naturally is very similar to grammatically correct text. Something like this could never be achieved when using English (or any other language for that matter) as it is too complex and inconsistent.
 
 === Philosophy
 
@@ -38,10 +38,10 @@ Comments in code are simply parts that you want the computer to ignore. Therefor
 
 These comments will continue until the end of the line. For multi line comments, you can use
 
-    :
-    (
-        COMMENT
-    )
+    : COMMENT \
+    COMMENT \
+    COMMENT \
+    COMMENT
 
 === Variables
 
@@ -348,7 +348,7 @@ Here are some examples in toki pi ilo sona.
             :
             (
                 , ?
-                , , ?
+                , , ?
                 , , ?
                 :
                 (
@@ -364,4 +364,4 @@ Here are some examples in toki pi ilo sona.
     )
     .
     .
-    .
+    .
